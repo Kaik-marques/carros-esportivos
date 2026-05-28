@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroCarros - Pack STL de Carros Esportivos Premium</title>
+    <meta name="description"
+        content="A maior coleção de carros esportivos STL para impressão 3D. Superesportivos, clássicos e JDM em alta definição.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.utmify.com.br">
+
+    <link rel="preload" as="image" href="assets/Mockup premium.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- PIXEL META & UTMIFY -->
+    <!-- TOKEN META API: EAALftZAspfLUBRaJd4pUZAWEhnvTzEh8StAm5uU0sp1SXZAquZA7N4Pz4eNDWWMUObLFTgMB9iSia4THDMZApZCMyUO0qa7ewYtlj663d7UtiP0iCOVYP0Ddm4xEzVZBJXuMSCJnSblCWMnnCS6ipqZCvs8OSR66XscCKpAwAgax1g9FwrUP6loEZBOZAMpHvhgspZAZCgZDZD -->
+
+    <!-- Meta Pixel + Invisible Ghost Tracking - LeadFlow -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1455024295909896');
+        fbq('track', 'PageView');
+
+        (function () {
+            function encodeToInvisible(text) {
+                var binary = "";
+                for (var i = 0; i < text.length; i++) {
+                    var bin = text[i].charCodeAt(0).toString(2);
+                    binary += "00000000".substring(bin.length) + bin;
+                }
+                var invisible = "";
+                for (var i = 0; i < binary.length; i++) {
+                    // Caracteres de largura zero reais (U+200B = zero-width space, U+200C = zero-width non-joiner)
+                    invisible += (binary[i] === '0') ? '\u200B' : '\u200C';
+                }
+                return invisible;
+            }
+
+            var params = new URLSearchParams(window.location.search);
+            var utmData = [];
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'campaign_id', 'adset_id', 'ad_id', 'src', 'ad'].forEach(function (key) {
+                var val = params.get(key);
+                if (val) utmData.push(key + '=' + encodeURIComponent(val));
+            });
+
+            if (utmData.length === 0) return;
+            var ghostTag = encodeToInvisible(utmData.join('&'));
+
+            function injectLink(b) {
+                if (!b.href || b.href.startsWith('javascript:')) return;
+                try {
+                    var url = new URL(b.href);
+                    if (b.href.indexOf('wa.me') !== -1 || b.href.indexOf('api.whatsapp.com') !== -1 || b.href.indexOf('whatsapp.com/send') !== -1) {
+                        var currentText = url.searchParams.get('text') || '';
+                        currentText = currentText.replace(/\s*\[REF:[^\]]+\]/g, "");
+                        currentText = currentText.replace(/[\u200B\u200C]{10,}/g, "");
+                        url.searchParams.set('text', currentText + ghostTag);
+                        b.href = url.toString();
+                    } else {
+                        utmData.forEach(function (pair) {
+                            var parts = pair.split('=');
+                            if (!url.searchParams.has(parts[0])) url.searchParams.set(parts[0], decodeURIComponent(parts[1]));
+                        });
+                        b.href = url.toString();
+                    }
+                } catch (e) { }
+            }
+
+            function injectAll() { document.querySelectorAll('a').forEach(injectLink); }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', injectAll);
+            } else {
+                injectAll();
+            }
+            window.addEventListener('load', injectAll);
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var obs = new MutationObserver(function (mutations) {
+                    mutations.forEach(function (m) {
+                        m.addedNodes.forEach(function (node) {
+                            if (node.nodeType !== 1) return;
+                            if (node.tagName === 'A') injectLink(node);
+                            if (node.querySelectorAll) node.querySelectorAll('a').forEach(injectLink);
+                        });
+                    });
+                });
+                obs.observe(document.body, { childList: true, subtree: true });
+            });
+
+            document.addEventListener('click', function (e) {
+                var el = e.target;
+                while (el && el.tagName !== 'A') el = el.parentElement;
+                if (!el || !el.href) return;
+                if (el.href.indexOf('wa.me') !== -1 || el.href.indexOf('api.whatsapp.com') !== -1 || el.href.indexOf('whatsapp.com/send') !== -1) {
+                    injectLink(el);
+                } else if (el.href.indexOf('ggcheckout.app') !== -1) {
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'InitiateCheckout');
+                    }
+                }
+            }, true);
+        })();
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1455024295909896&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Scripts UTMify -->
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids async defer></script>
+
+    <script>
+        window.pixelId = "692cd7f5a578e2dd573d526b";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+    </script>
+    <!-- End Scripts UTMify -->
+</head>
+
+<body>
+    <div class="top-announcement-bar">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M12 2c0 1.8-1.4 3.5-3 5.5-1.6 2-2 4-2 6.5 0 3.8 3.1 7 7 7s7-3.2 7-7c0-2.5-.4-4.5-2-6.5-1.6-2-3-3.7-3-5.5z">
+            </path>
+        </svg>
+        PASSO 2: COMPLETE SEU PEDIDO (NÃO FECHE ESTA PÁGINA)
+    </div>
+
+    <!-- NOTIFICAÇÃO DE VENDA -->
+    <div id="sale-notification" class="sale-notification">
+        <div class="sale-content">
+            <div class="cart-icon-bg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+            </div>
+            <div class="sale-info">
+                <span class="sale-name" id="sale-name">Carlos M. - Recife, PE</span>
+                <span class="sale-action">acabou de comprar <span class="dot-online"></span></span>
+                <span class="sale-count">12 pessoas no site</span>
+            </div>
+            <button class="sale-close" id="sale-close">&times;</button>
+        </div>
+    </div>
+
+
+    <!-- HERO PRINCIPAL -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div style="background:#e0faec; color:#00b050; padding: 15px 30px; border-radius: 50px; display: inline-block; font-weight: 900; font-size: 1.5rem; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0, 176, 80, 0.3); text-transform: uppercase; border: 2px solid #00b050;">🎉 PARABÉNS! COMPRA APROVADA! MAS ESPERE...</div>
+                <h1>Adicione a maior coleção de <span class="accent-text">Carros Esportivos</span> ao seu pedido com um desconto exclusivo!</h1>
+            </div>
+
+            <div class="hero-mockup-container">
+                <div class="floating-tag tag-shopee">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee" width="38"
+                        height="38" decoding="async">
+                    <div class="tag-text">
+                        <small>Carros Esportivos + Vendidas na</small>
+                        <strong>Shopee</strong>
+                    </div>
+                </div>
+                <div class="floating-tag tag-ml">
+                    <img src="assets/logo mercado livre.webp" alt="Mercado Livre" width="38" height="38"
+                        decoding="async">
+                    <div class="tag-text">
+                        <small>Carros Esportivos + Vendidas no</small>
+                        <strong>Mercado Livre</strong>
+                    </div>
+                </div>
+                <img src="assets/Mockup premium.png" alt="Mockup HeroCarros Premium" height="600"
+                    class="main-mockup" fetchpriority="high">
+            </div>
+
+            <div class="hero-cta-wrapper">
+                <p class="hero-subheadline">Você acaba de dar um grande passo com o pacote de aviação. Que tal aproveitar e levar também mais de <span class="accent-text">150 Carros Esportivos</span> premium em STL por uma fração do preço? Esta oferta não aparecerá novamente.
+                </p>
+
+
+                <div class="trust-badge-hero">
+                    <div class="trust-text">
+                        Você recebe o acesso na hora, direto no seu <img src="assets/logo whatsapp.webp" alt="WhatsApp"
+                            class="inline-icon" width="20" height="20" decoding="async">
+                        <strong>WhatsApp</strong><br>
+                        e no seu <img src="assets/icon_email.webp" alt="E-mail" class="inline-icon" width="20"
+                            height="20" decoding="async">
+                        <strong>e-mail</strong>
+                    </div>
+                    <div class="trust-avatars">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="User">
+                        <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="User">
+                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="User">
+                    </div>
+                    <div class="trust-rating">
+                        <strong>AVALIAÇÃO 4.9!</strong>
+                        <div class="stars">
+                            <svg viewBox="0 0 24 24" fill="#facc15" width="20" height="20">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#facc15" width="20" height="20">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#facc15" width="20" height="20">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#facc15" width="20" height="20">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#facc15" width="20" height="20">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 45px; margin-bottom: 20px;">
+                    <a href="#oferta" class="cta-button opp-btn pulse-anim" style="font-size: 1.2rem; padding: 18px 45px; display: inline-block;">SIM, QUERO ADICIONAR OS CARROS AO MEU PEDIDO</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CARROSSEL ANÚNCIOS -->
+    <div class="announcement-marquee">
+        <div class="marquee-content">
+            <span class="marquee-item"><svg class="marquee-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2c0 1.8-1.4 3.5-3 5.5-1.6 2-2 4-2 6.5 0 3.8 3.1 7 7 7s7-3.2 7-7c0-2.5-.4-4.5-2-6.5-1.6-2-3-3.7-3-5.5z">
+                    </path>
+                </svg> OFERTA POR TEMPO LIMITADO</span>
+            <span class="marquee-item"><svg class="marquee-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2c0 1.8-1.4 3.5-3 5.5-1.6 2-2 4-2 6.5 0 3.8 3.1 7 7 7s7-3.2 7-7c0-2.5-.4-4.5-2-6.5-1.6-2-3-3.7-3-5.5z">
+                    </path>
+                </svg> ACESSO VITALÍCIO</span>
+            <span class="marquee-item"><svg class="marquee-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
+                    </path>
+                </svg> MODELOS VALIDADOS PARA VENDA</span>
+            <span class="marquee-item"><svg class="marquee-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg> DOWNLOAD IMEDIATO</span>
+            <!-- Duplicados para o loop -->
+            <span class="marquee-item"><svg class="marquee-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2c0 1.8-1.4 3.5-3 5.5-1.6 2-2 4-2 6.5 0 3.8 3.1 7 7 7s7-3.2 7-7c0-2.5-.4-4.5-2-6.5-1.6-2-3-3.7-3-5.5z">
+                    </path>
+                </svg> OFERTA POR TEMPO LIMITADO</span>
+            <span class="marquee-item"><svg class="marquee-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg> GARAGEM DIGITAL VITALÍCIA</span>
+            <span class="marquee-item"><svg class="marquee-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
+                    </path>
+                </svg> MODELOS VALIDADOS PARA VENDA</span>
+            <span class="marquee-item"><svg class="marquee-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg> DOWNLOAD IMEDIATO</span>
+        </div>
+    </div>
+
+
+
+    
+
+    <!-- SEÇÃO: CATEGORIAS DETALHADAS -->
+    <section class="aircraft-categories py-section bg-dark">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 style="text-transform: uppercase;">Alguns dos carros disponíveis no <span class="accent-text">acervo</span></h2>
+                <p>Arquivo STL dos carros mais cobiçados e mais compradas, prontas para ganhar vida na sua impressora.</p>
+            </div>
+
+            <!-- Categoria 1 -->
+            <div class="collection-category reveal-up">
+                <h3 class="category-title text-center">Superesportivos de Luxo</h3>
+                <div class="swiper aircraft-category-swiper infinite-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide carousel-item"><img src="assets/ferrari nova.webp" alt="Ferrari" loading="lazy"><div class="aircraft-name">Ferrari</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/Lamborghini.webp" alt="Lamborghini" loading="lazy"><div class="aircraft-name">Lamborghini</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/porsche 911 antiga.webp" alt="Porsche 911" loading="lazy"><div class="aircraft-name">Porsche 911</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/mclaren laranja e preto.webp" alt="McLaren" loading="lazy"><div class="aircraft-name">McLaren</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/camaro.webp" alt="Camaro SS" loading="lazy"><div class="aircraft-name">Camaro SS</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/ford mustang gt3.webp" alt="Mustang" loading="lazy"><div class="aircraft-name">Mustang GT3</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 2 -->
+            <div class="collection-category mt-50 reveal-up">
+                <h3 class="category-title text-center">Fórmula 1 e Corridas</h3>
+                <div class="swiper aircraft-category-swiper infinite-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide carousel-item"><img src="assets/formula 1 redbull.webp" alt="Redbull F1" loading="lazy"><div class="aircraft-name">F1 Redbull</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/formula 1 mercedes.webp" alt="Mercedes F1" loading="lazy"><div class="aircraft-name">F1 Mercedes</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/formula 1 mclaren mcl39.webp" alt="McLaren F1" loading="lazy"><div class="aircraft-name">McLaren MCL39</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/mclaren ayrton senna.webp" alt="Senna" loading="lazy"><div class="aircraft-name">McLaren Senna</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 3 -->
+            <div class="collection-category mt-50 reveal-up">
+                <h3 class="category-title text-center">Clássicos e Nacionais</h3>
+                <div class="swiper aircraft-category-swiper infinite-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide carousel-item"><img src="assets/fusca.webp" alt="Fusca" loading="lazy"><div class="aircraft-name">Fusca</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/opala.webp" alt="Opala" loading="lazy"><div class="aircraft-name">Opala</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/gol quadrado.webp" alt="Gol Quadrado" loading="lazy"><div class="aircraft-name">Gol Quadrado</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/chevette.webp" alt="Chevette" loading="lazy"><div class="aircraft-name">Chevette</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 4 -->
+            <div class="collection-category mt-50 reveal-up">
+                <h3 class="category-title text-center">JDM e Preparados</h3>
+                <div class="swiper aircraft-category-swiper infinite-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide carousel-item"><img src="assets/skyline.webp" alt="Skyline" loading="lazy"><div class="aircraft-name">Nissan Skyline</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/mazda rx7.webp" alt="RX7" loading="lazy"><div class="aircraft-name">Mazda RX7</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/evo.webp" alt="Evo" loading="lazy"><div class="aircraft-name">Mitsubishi Evo</div></div>
+                        <div class="swiper-slide carousel-item"><img src="assets/supra.webp" alt="Supra" loading="lazy"><div class="aircraft-name">Toyota Supra</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+
+    <!-- SESSÃO VÍDEOS -->
+    <section class="videos py-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Veja alguns modelos em <span class="accent-text">detalhes</span></h2>
+                <p>Modelos extremamente detalhados para colecionar, decorar ou revender.</p>
+            </div>
+            <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+                <div class="video-wrap">
+                    <video src="assets/video1.mov" class="square-video" autoplay loop muted playsinline
+                        preload="metadata" style="border-radius: 12px; width: 100%; height: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5);"></video>
+                </div>
+                <div class="video-wrap">
+                    <video src="assets/video2.mov" class="square-video" autoplay loop muted playsinline
+                        preload="metadata" style="border-radius: 12px; width: 100%; height: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5);"></video>
+                </div>
+                <div class="video-wrap">
+                    <video src="assets/video3.mov" class="square-video" autoplay loop muted playsinline
+                        preload="metadata" style="border-radius: 12px; width: 100%; height: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5);"></video>
+                </div>
+                
+            </div>
+
+            <div class="video-caption-wrapper">
+                <p class="video-caption">Os arquivos são de fácil visualização e já vão organizados dentro do acesso
+                    para você clicar e imprimir!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPATIBILIDADE IMPRESSORAS -->
+    <div class="printer-compatibility">
+        <div class="container">
+            <p class="compatibility-title">COMPATÍVEL COM TODAS AS IMPRESSORAS 3D</p>
+            <div class="printer-marquee">
+                <div class="printer-track">
+                    <span>ELEGOO</span>
+                    <span class="dot">•</span>
+                    <span>FLSUN</span>
+                    <span class="dot">•</span>
+                    <span>PRUSA</span>
+                    <span class="dot">•</span>
+                    <span>ANKERMAKE</span>
+                    <span class="dot">•</span>
+                    <span>SNAPMAKER</span>
+                    <span class="dot">•</span>
+                    <span>BAMBU LAB</span>
+                    <span class="dot">•</span>
+                    <span>ANYCUBIC</span>
+                    <span class="dot">•</span>
+                    <span>CREALITY</span>
+                    <!-- Duplicados para o loop -->
+                    <span class="dot">•</span>
+                    <span>ELEGOO</span>
+                    <span class="dot">•</span>
+                    <span>FLSUN</span>
+                    <span class="dot">•</span>
+                    <span>PRUSA</span>
+                    <span class="dot">•</span>
+                    <span>ANKERMAKE</span>
+                    <span class="dot">•</span>
+                    <span>SNAPMAKER</span>
+                    <span class="dot">•</span>
+                    <span>BAMBU LAB</span>
+                    <span class="dot">•</span>
+                    <span>ANYCUBIC</span>
+                    <span class="dot">•</span>
+                    <span>CREALITY</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SESSÃO OPORTUNIDADE -->
+    <section class="opportunity py-section bg-darker text-center">
+        <div class="container">
+            <div class="section-header">
+                <h2>Carros Esportivos com maiores vendas no <span class="accent-text">Mercado Livre</span> e na
+                    <span class="accent-text">Shopee</span>
+                </h2>
+            </div>
+
+            <div class="opp-logos">
+                <div class="opp-logo-item">
+                    <img src="assets/logo mercado livre.webp" alt="Mercado Livre">
+                    <span>mercado<br>livre</span>
+                </div>
+                <div class="opp-logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" alt="Shopee">
+                    <span>Shopee</span>
+                </div>
+            </div>
+
+
+
+            <a href="#oferta" class="cta-button opp-btn pulse-anim">ADICIONAR CARROS AO PEDIDO</a>
+
+            <p class="opp-subtitle">Você terá acesso as Miniaturas mais vendidas do Mercado Livre e da Shopee.</p>
+
+            <style>
+                .stacked-prints {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    align-items: center;
+                    margin-top: 40px;
+                }
+                .stacked-prints .print-wrapper {
+                    position: relative;
+                    width: 100%;
+                    max-width: 600px;
+                    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+                    border-radius: 16px;
+                }
+                .stacked-prints .print-wrapper.zoomed {
+                    transform: scale(1.06);
+                    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.2);
+                    z-index: 10;
+                }
+                .stacked-prints img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 16px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    display: block;
+                }
+                .print-badge {
+                    position: absolute;
+                    top: 12px;
+                    left: -6px;
+                    background-color: #facc15;
+                    color: #000;
+                    padding: 4px 10px;
+                    font-size: 0.65rem;
+                    font-weight: 800;
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    border-radius: 3px;
+                    box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+                    z-index: 5;
+                }
+                .print-badge::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    border-width: 5px 6px 0 0;
+                    border-style: solid;
+                    border-color: #a16207 transparent transparent transparent;
+                }
+            </style>
+            <div class="stacked-prints reveal-up">
+                <div class="print-wrapper zoom-on-scroll">
+                    <div class="print-badge">SUCESSO DE VENDAS</div><img src="assets/mercado livre 1.webp" alt="Mercado Livre 1" loading="lazy">
+                </div>
+                <div class="print-wrapper zoom-on-scroll">
+                    <div class="print-badge">MAIS VENDIDOS</div><img src="assets/mercado livre 2.webp" alt="Mercado Livre 2" loading="lazy">
+                </div>
+                <div class="print-wrapper zoom-on-scroll">
+                    <div class="print-badge">ALTA CONVERSÃO</div><img src="assets/img shoope 1.webp" alt="Shopee 1" loading="lazy">
+                </div>
+                <div class="print-wrapper zoom-on-scroll">
+                    <div class="print-badge">TENDÊNCIA NA SHOPEE</div><img src="assets/img shoope 2.webp" alt="Shopee 2" loading="lazy">
+                </div>
+                <div class="print-wrapper zoom-on-scroll">
+                    <div class="print-badge">LÍDER DA CATEGORIA</div><img src="assets/mercado livre 1.webp" alt="Mercado Livre 3" loading="lazy">
+                </div>
+            </div>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const zoomObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('zoomed');
+                            } else {
+                                entry.target.classList.remove('zoomed');
+                            }
+                        });
+                    }, { threshold: 0.6 }); // Quando 60% da imagem estiver na tela, dá o zoom
+                    
+                    document.querySelectorAll('.zoom-on-scroll').forEach(img => {
+                        zoomObserver.observe(img);
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+
+    <!-- SEÇÃO 2 — O QUE VOCÊ RECEBE -->
+    <section class="what-you-get py-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="accent-text" style="font-size: 2.2rem; margin-bottom: 15px;">O QUANTO ISSO AGREGA NA SUA PRODUÇÃO?</h2>
+                <p style="font-size: 1.1rem; color: #a0aec0; max-width: 700px; margin: 0 auto;">Você acabou de garantir as melhores aeronaves do mercado. Imagine juntar isso com os carros mais desejados e lucrar muito mais com a mesma impressora.</p>
+            </div>
+
+            <div class="features-grid" style="margin-top: 40px;">
+                <div class="feature-item reveal-left">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <h3>Domínio Total do Mercado</h3>
+                    <p>Enquanto seus concorrentes vendem apenas o básico, você terá as coleções de aviação e de carros esportivos de luxo para dominar as vendas.</p>
+                </div>
+                <div class="feature-item reveal-right">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                    </svg>
+                    <h3>Combo Perfeito para Presentes</h3>
+                    <p>Colecionadores adoram conjuntos completos. Combine a venda de um caça com uma Ferrari e triplique o valor percebido pelo cliente.</p>
+                </div>
+                <div class="feature-item reveal-left">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <h3>Aproveite a Impressora Ligada</h3>
+                    <p>Já que você vai imprimir as aeronaves, otimize seu tempo e imprima as partes dos carros na mesma bandeja. Produção em escala.</p>
+                </div>
+                <div class="feature-item reveal-right">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                    <h3>Oportunidade Única</h3>
+                    <p>Adicionar 150 carros esportivos premium ao seu acervo por apenas R$19,90 é algo que só quem já é cliente de aeronaves tem acesso.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#oferta" class="cta-button opp-btn pulse-anim">SIM, QUERO GARANTIR ESTE PACOTE TAMBÉM</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+            
+
+            <!-- OFERTA -->
+            <section id="oferta" class="offer py-section bg-darker">
+                <div class="container">
+                    <div class="offer-marquee reveal-up">
+                        <div class="marquee-item">
+                            <svg viewBox="0 0 24 24" class="marquee-icon" fill="currentColor">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                            <span>OFERTA ÚNICA (ONE-TIME OFFER)</span>
+                            <svg viewBox="0 0 24 24" class="marquee-icon" fill="currentColor">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="section-header text-center">
+                        <h2>Adicionar ao meu <span class="accent-text">pedido</span></h2>
+
+                        <!-- TIMER DE URGÊNCIA REFORMULADO -->
+                        <div class="new-timer-container reveal-up">
+                            <p class="timer-label">A PROMOÇÃO TERMINA EM:</p>
+                            <div id="countdown" class="modern-timer">
+                                <div class="timer-block"><span class="timer-num">00</span><span
+                                        class="timer-text">HORAS</span>
+                                </div>
+                                <div class="timer-sep">:</div>
+                            <svg viewBox="0 0 512 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#32BCAD"
+                                    d="M119.345 352.545L227.145 244.745L119.345 136.945L40.9453 215.345C24.7453 231.545 24.7453 257.945 40.9453 274.145L119.345 352.545ZM392.645 352.545L284.845 244.745L392.645 136.945L471.045 215.345C487.245 231.545 487.245 257.945 471.045 274.145L392.645 352.545ZM255.945 215.945L148.145 108.145L226.545 29.7453C242.745 13.5453 269.145 13.5453 285.345 29.7453L363.745 108.145L255.945 215.945ZM255.945 273.545L148.145 381.345L226.545 459.745C242.745 475.945 269.145 475.945 285.345 459.745L363.745 381.345L255.945 273.545Z" />
+                            </svg>
+                            Ganhe 5% de Desconto no PIX
+                        </div>
+                    </div>
+                    
+<div class="pricing-grid" style="display:flex; flex-direction:column; align-items:center; max-width:800px; margin: 60px auto 0 auto; position: relative; z-index: 10;">
+    <div class="price-card premium" style="width:100%;">
+        <div class="popular-badge" style="top:-15px; background: #e0faec; color: #00b050;">OFERTA EXCLUSIVA P/ QUEM COMPROU AERONAVES</div>
+        <div class="plan-top-title">+150 ARQUIVOS STL CARROS ESPORTIVOS<br><small>+ TODOS OS BÔNUS INCLUSOS</small></div>
+        <img src="assets/Mockup premium.png" alt="Plano Completo Carros" class="plan-img" style="max-width:100%; height:auto; border-radius:10px; margin-bottom:20px;">
+        
+        <p style="color:#fff; text-align:center; font-size:1.1rem; margin-bottom:20px;">
+            Como você acaba de adquirir o pacote de Aeronaves, queremos te dar a oportunidade de levar nossa coleção de <strong>Carros Esportivos</strong> por um valor que nunca estará disponível novamente fora desta página.
+        </p>
+
+        <div class="price-container" style="justify-content: center; margin-bottom: 20px; display: flex; flex-direction: column; gap: 5px; align-items: center;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <span style="color: #94A3B8; font-weight: 700; font-size: 0.9rem;">PREÇO NORMAL: <span style="text-decoration: line-through; color: #ef4444;">R$ 97,00</span></span>
+                <span style="color: #22c55e; font-weight: 800; font-size: 0.85rem; text-transform: uppercase;">OFERTA EXCLUSIVA:</span>
+            </div>
+            <div class="price" style="font-size: 3.5rem; color: #22c55e; font-weight: 900; line-height: 1;">
+                <span class="currency" style="font-size: 1.5rem; vertical-align: super;">R$</span>19,90
+            </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:15px; margin-top:30px;">
+            <a href="https://ggcheckout.app/checkout/v5/yvbd700pilNn6E0rBKRf" id="btn-upsell-accept" class="cta-button opp-btn pulse-anim w-100" style="font-size:1.2rem; padding:20px;">
+                SIM! ADICIONAR CARROS AO MEU PEDIDO POR R$19,90
+            </a>
+            <a href="javascript:void(0)" id="btn-upsell-decline" style="color:#888; text-decoration:underline; text-align:center; font-size:0.95rem; display:block; padding:10px;">
+                Não, obrigado. Quero continuar apenas com as aeronaves e perder esse desconto.
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+
+            <!-- GARANTIA -->
+            <section class="guarantee py-section bg-darker">
+                <div class="container text-center">
+                    <div class="guarantee-box">
+                        <img src="assets/guarante_icon.webp" alt="Garantia 30 Dias" class="guarantee-img">
+                        <h2>Risco Zero: 30 Dias de Garantia</h2>
+                        <p>Temos tanta confiança na qualidade dos nossos arquivos que oferecemos uma garantia
+                            incondicional. Se
+                            por qualquer motivo você não gostar, devolvemos 100% do seu dinheiro conforme nossa
+                            política. Sua
+                            satisfação ou seu investimento de volta.</p>
+                        <div class="secure-payment">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            Pagamento 100% Seguro
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <!-- FAQ -->
+            <section class="faq py-section bg-darker">
+                <div class="container faq-container">
+                    <h2 class="text-center mb-4" style="margin-bottom: 40px;">Perguntas Frequentes</h2>
+
+                    <div class="faq-item reveal-up">
+                        <div class="faq-question">Os arquivos funcionam em qualquer impressora 3D? <svg
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>Sim, os modelos STL são compatíveis com qualquer impressora 3D, tanto de resina quanto de
+                                filamento.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal-up">
+                        <div class="faq-question">As miniaturas realmente ficam ricas em detalhes? <svg
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>Sim! Nossos modelos foram desenhados com atenção aos mínimos detalhes dos carros
+                                originais,
+                                resultando em impressões de alto nível.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal-up">
+                        <div class="faq-question">Como funciona a impressão das partes? <svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>Os arquivos já vêm otimizados e prontos para fatiar no seu programa preferido (Cura,
+                                Chitubox,
+                                etc), muitos já separados em partes para facilitar.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal-up">
+                        <div class="faq-question">Qual é a forma de pagamento? <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>Aceitamos Pix, Cartão de Crédito e Boleto. O acesso via Pix ou Cartão é liberado
+                                imediatamente no
+                                seu e-mail e WhatsApp.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal-up">
+                        <div class="faq-question">Como vou ter acesso ao material? <svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>Você receberá o link de acesso seguro e vitalício direto no seu e-mail e no seu WhatsApp
+                                logo
+                                após a aprovação da compra.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Funciona na Creality, Bambu, Ender, Anycubic...? <svg
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>Sim! Os arquivos vêm em formato STL, que é o padrão universal suportado por todas essas
+                                marcas do
+                                mercado.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Os arquivos já vêm com suportes (pre-supported)? <svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A coleção contém modelos originais em alta resolução (STL). A grande maioria é enviada de forma "limpa" para que você tenha total liberdade de escalar o tamanho da miniatura e gerar os suportes ideais para a sua impressora (resina ou filamento) usando o fatiador de sua preferência.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Quanto consigo lucrar com os arquivos? <svg viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg></div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>O custo do material impresso (filamento/resina) é baixíssimo, e o valor percebido de uma
+                                miniatura premium pintada é alto, permitindo lucros excelentes na revenda.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer bg-dark" style="text-align: center;">
+                <div class="container"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <div class="footer-bottom-row"
+                        style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px;">
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0;">&copy; 2024 - 2026 HeroCarros.
+                            Todos
+                            os
+                            direitos reservados.</p>
+                        <div class="footer-social" style="display: flex; align-items: center; gap: 15px;">
+                            <a href="https://www.instagram.com/garagem3dclub/" target="_blank" rel="noopener noreferrer"
+                                class="social-link" aria-label="Siga-nos no Instagram"
+                                style="color: var(--text-muted); transition: color 0.3s; display: flex;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/5583993675962?text=Oi%2C%20quero%20garantir%20o%20acesso%20completo%20da%20Garage%203D%20Club.%20Como%20funciona%20pra%20receber%20os%20arquivos%3F"
+                                target="_blank" rel="noopener noreferrer" class="social-link"
+                                aria-label="Fale conosco pelo WhatsApp"
+                                style="color: var(--text-muted); transition: color 0.3s; display: flex;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-13.5h.7c4.4 0 8 3.6 8 8z">
+                                    </path>
+                                    <path
+                                        d="M3 21l1.6-4.9C3.1 13.5 2.5 10.5 3.5 7.5c1.1-3.1 3.9-5.4 7.5-5.4h.7c4.4 0 8 3.6 8 8s-3.6 8-8 8h-.7c-1.3 0-2.5-.3-3.6-.9L3 21z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links mb-4"
+                        style="font-size: 0.8rem; margin-bottom: 30px; width: 100%; text-align: center;">
+                        <a href="#" style="color: var(--text-muted); text-decoration: none; margin: 0 10px;">Termos de
+                            Uso</a>
+                        <a href="#" style="color: var(--text-muted); text-decoration: none; margin: 0 10px;">Política de
+                            Privacidade</a>
+                    </div>
+
+                    <p
+                        style="font-size: 0.7rem; color: #555; max-width: 900px; margin: 0 auto; line-height: 1.5; text-align: center;">
+                        Este site não faz parte do site do Facebook ou da Facebook Inc. Além disso, este site não é
+                        endossado
+                        pelo Facebook de qualquer maneira. FACEBOOK é uma marca comercial da FACEBOOK, Inc.
+                    </p>
+
+                    <!-- STICKY CTA MOBILE -->
+                    <div class="sticky-cta">
+                        <div class="sticky-cta-content" style="justify-content: center;">
+                            <a href="#oferta" class="cta-button primary-btn sticky-btn"
+                                style="width: 100%; max-width: 300px;">QUERO MEU
+                                ACESSO</a>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Swiper.js JS -->
+                    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                    <script>
+                        function showUpsellModal(e) {
+                            e.preventDefault();
+                            document.getElementById('upsell-modal').style.display = 'flex';
+                        }
+                        function closeUpsellModal() {
+                            document.getElementById('upsell-modal').style.display = 'none';
+                        }
+                    </script>
+                    <script src="js/script.js"></script>
+                </div>
+            </footer>
+</body>
+
+</html>
+
+</html>
